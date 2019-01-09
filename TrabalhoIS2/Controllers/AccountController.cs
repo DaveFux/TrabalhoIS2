@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Globalization;
 using System.Linq;
 using System.Security.Claims;
@@ -17,6 +19,7 @@ namespace TrabalhoIS2.Controllers
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
+        private SqlConnection conn;
 
         public AccountController()
         {
@@ -28,6 +31,36 @@ namespace TrabalhoIS2.Controllers
             SignInManager = signInManager;
         }
 
+        public ActionResult ManageAccount()
+        {
+            return View();
+        }
+
+        /*public ActionResult ManageAccount()
+        {
+            String connectionString = "<THE CONNECTION STRING HERE>";
+            String sql = "SELECT * FROM docentes";
+            SqlCommand cmd = new SqlCommand(sql, conn);
+
+            var model = new List<Docente>();
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                SqlDataReader rdr = cmd.ExecuteReader();
+                while (rdr.Read())
+                {
+                    var docente = new Docente();
+                    docente.Nome=(String)rdr["FirstName"];
+                    docente.Instituto = rdr["LastName"];
+                    docente.Categoria = rdr["Class"];
+                    model.Add(docente);
+                }
+
+            }
+
+            return View(model);
+        }
+        */
         public ApplicationSignInManager SignInManager
         {
             get
@@ -57,6 +90,7 @@ namespace TrabalhoIS2.Controllers
         [AllowAnonymous]
         public ActionResult Login(string returnUrl)
         {
+            Console.WriteLine("Get Login");
             ViewBag.ReturnUrl = returnUrl;
             return View();
         }
@@ -68,6 +102,7 @@ namespace TrabalhoIS2.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Login(LoginViewModel model, string returnUrl)
         {
+            Console.WriteLine("Post Login");
             if (!ModelState.IsValid)
             {
                 return View(model);
@@ -96,6 +131,7 @@ namespace TrabalhoIS2.Controllers
         [AllowAnonymous]
         public async Task<ActionResult> VerifyCode(string provider, string returnUrl, bool rememberMe)
         {
+            Console.WriteLine("Get VerifyCode");
             // Require that the user has already logged in via username/password or external login
             if (!await SignInManager.HasBeenVerifiedAsync())
             {
@@ -111,6 +147,7 @@ namespace TrabalhoIS2.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> VerifyCode(VerifyCodeViewModel model)
         {
+            Console.WriteLine("Post VerifyCode");
             if (!ModelState.IsValid)
             {
                 return View(model);

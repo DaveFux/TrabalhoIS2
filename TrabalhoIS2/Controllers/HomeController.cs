@@ -26,5 +26,23 @@ namespace TrabalhoIS2.Controllers
 
             return View();
         }
+        
+        
+
+        public ActionResult FichaDocente()
+        {
+            return View();
+        }
+
+        public ActionResult EditarFicha()
+        {
+            return View();
+        }
+
+
+
+
+
+
     }
 }

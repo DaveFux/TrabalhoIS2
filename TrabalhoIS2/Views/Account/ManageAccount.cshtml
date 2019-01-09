@@ -1,0 +1,17 @@
+﻿@model TrabalhoIS2.Models.Docente
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    ViewBag.Title = User.Identity.Name;
+}
+
+<h2>@ViewBag.Title.</h2>
+<div>
+        
+    <ul>
+        <li class="nav-link">@Html.ActionLink("Editar Informação", "EditarFicha", "Home")</li>
+    </ul>
+</div>
+
+

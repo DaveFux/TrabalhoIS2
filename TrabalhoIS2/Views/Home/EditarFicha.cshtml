@@ -1,0 +1,221 @@
+﻿@model TrabalhoIS2.Models.Docente
+
+@{
+ViewBag.Title = "FichaDocente";
+}
+
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Ficha Docente</title>
+</head>
+
+<body>
+    <div class="body-content">
+        <h2>Ficha do Docente</h2>
+        <br />
+        <h3>Dados pessoais</h3>
+        <br />
+
+        <form id="editarFicha">
+            <div class="form-row">
+                <div class="col-md-4 mb-4">
+                    <label for="inputEmail4">Nome</label>
+                    <input type="text" class="form-control" id="inputEmail6" placeholder="">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <label for="inputPassword4">Email</label>
+                    <input type="email" class="form-control is-invalid" id="inputPassword6" placeholder="example@example.com"
+                        required>
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    <div class="invalid-feedback">
+                        Please enter a valid email.
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-4 mb-4">
+                    <label for="inputEmail4">Current password</label>
+                    <input type="password" class="form-control is-invalid" id="inputEmail4" placeholder="" required>
+                    <div class="invalid-feedback">
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <label for="inputPassword4">New password</label>
+                    <input type="password" class="form-control is-invalid" id="inputPassword4" placeholder="" required>
+                    <div class="invalid-feedback">
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-4">
+                    <label for="exampleInputEmail1">Instituto</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        placeholder="">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-4">
+                    <label for="exampleInputEmail1">Categoria</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        placeholder="">
+                </div>
+            </div>
+
+            <br />
+            <h3>Graus</h3>
+            <br />
+
+            <form class="form-inline" id="addGrau">
+
+                <div class="form-row">
+                    <div class="col-md-3 mb-3">
+                        <label for="validationCustom01">Ano</label>
+                        <input type="text" class="form-control" id="validationCustom01" placeholder="" required>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="validationCustom02">Titulo</label>
+                        <input type="text" class="form-control" id="validationCustom02" placeholder="" required>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="validationCustom02">Area</label>
+                        <input type="text" class="form-control" id="validationCustom02" placeholder="" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col-md-3 mb-3">
+                        <label for="validationCustom01">Grau</label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            <option value="Licenciatura">Licenciatura</option>
+                            <option value="Mestrado">Mestrado</option>
+                            <option value="Doutoramento">Doutoramento</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="validationCustom02">Experiencia Profissional</label>
+                        <input type="text" class="form-control" id="validationCustom02" placeholder="" required>
+                    </div>
+                </div>
+            </form>
+
+            <br />
+            <h3>Disciplinas</h3>
+
+            <form id="addDisciplina">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Ano Letivo</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="" aria-label="Ano Letivo" aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Semestre</span>
+                    </div>
+                    <input type="number" class="form-control" placeholder="" aria-label="Semestre" aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Unidade Curricular</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="" aria-label="Unidade Curricular"
+                        aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Ciclo de Estudos</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="" aria-label="Ciclo de Estudos"
+                        aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Tipo</span>
+                    </div>
+                    <select>
+                        <option value="Teorico">Ensino Teórico</option>
+                        <option value="TeoricoPratico">Ensino Teórico-Prático</option>
+                        <option value="PraticoLaboratorial">Ensino Prático e Laboratorial</option>
+                        <option value="TrabalhoCampo">Trabalho de Campo</option>
+                        <option value="Seminario">Seminário</option>
+                        <option value="Estagio">Estágio</option>
+                        <option value="OrientacaoTutorial">Orientação Tutorial</option>
+                        <option value="Outro">Outro</option>
+                    </select>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Total de Horas</span>
+                    </div>
+                    <input type="number" class="form-control" placeholder="" aria-label="Ciclo de Estudos"
+                        aria-describedby="basic-addon1">
+                </div>
+            </form>
+
+            <br />
+            <h3>Registos</h3>
+
+            <form id="addRegistos">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Centro de Investigação</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="" aria-label="Centro de Investigacao"
+                        aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Unidade de Investigação</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="" aria-label="Unidade de Investigacao"
+                        aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Classificação</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="" aria-label="Classificacao" aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Instituição</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="" aria-label="Instituicao" aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Percentagem de Tempo</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="" aria-label="Percentagem de Tempo"
+                        aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Observações</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="" aria-label="Observacoes" aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Data de Inicio</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="" aria-label="Data de Inicio" aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Data de Fim</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="" aria-label="Data de Fim" aria-describedby="basic-addon1">
+                </div>
+            </form>
+        </form>
+        <!-- falta atividade -->
+    </div>
+</body>
+
+</html>
