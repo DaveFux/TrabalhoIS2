@@ -10,5 +10,5 @@
     CONSTRAINT [FK_Disciplina] FOREIGN KEY ([Id]) REFERENCES [dbo].[Disciplina] ([Id]),
     CONSTRAINT [FK_Registo] FOREIGN KEY ([Id]) REFERENCES [dbo].[Registo] ([Id]),
     CONSTRAINT [FK_Atividade] FOREIGN KEY ([Id]) REFERENCES [dbo].[Atividade] ([Id])
-);
+)
 

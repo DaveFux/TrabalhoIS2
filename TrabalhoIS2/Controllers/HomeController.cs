@@ -26,6 +26,8 @@ namespace TrabalhoIS2.Controllers
 
             return View();
         }
+        
+        
 
         public ActionResult FichaDocente()
         {

@@ -31,10 +31,10 @@
                         {
                             
                             @Html.AntiForgeryToken()
-                            <li>
-                                <!--aqui ele vai criar uma tab na navbar -->
-                                @Html.ActionLink("Hello " + User.Identity.Name + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
-                            </li>
+                    <li>
+                        <!--aqui ele vai criar uma tab na navbar -->
+                        @Html.ActionLink("Hello " + User.Identity.Name + "!", "ManageAccount", "Account")
+                    </li>
                             <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
 
                         };

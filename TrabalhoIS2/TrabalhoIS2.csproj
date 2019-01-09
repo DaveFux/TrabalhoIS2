@@ -315,6 +315,7 @@
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Home\FichaDocente.cshtml" />
+    <Content Include="Views\Account\ManageAccount.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

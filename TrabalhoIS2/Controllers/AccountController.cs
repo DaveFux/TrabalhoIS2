@@ -28,6 +28,11 @@ namespace TrabalhoIS2.Controllers
             SignInManager = signInManager;
         }
 
+        public ActionResult ManageAccount()
+        {
+            return View();
+        }
+
         public ApplicationSignInManager SignInManager
         {
             get
