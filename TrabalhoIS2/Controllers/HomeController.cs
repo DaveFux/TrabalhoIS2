@@ -25,8 +25,7 @@ namespace TrabalhoIS2.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
-        }
-        
+        }       
         
 
         public ActionResult FichaDocente()

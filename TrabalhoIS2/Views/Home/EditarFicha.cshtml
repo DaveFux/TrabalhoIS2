@@ -1,9 +1,10 @@
 ﻿@model TrabalhoIS2.Models.Docente
 
 @{
-ViewBag.Title = "FichaDocente";
+    ViewBag.Title = "FichaDocente";
 }
 
+<!--VIEW PARA DOCENTE PREENCHER/ALTERAR INFORMAÇÃO-->
 
 <!DOCTYPE html>
 
@@ -18,71 +19,74 @@ ViewBag.Title = "FichaDocente";
     <div class="body-content">
         <h2>Ficha do Docente</h2>
         <br />
+
+        <!-- DADOS PESSOAIS -->
         <h3>Dados pessoais</h3>
-
-        <form id="editarFicha">
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="basic-addon1">Nome</span>
-                </div>
-                <input type="text" class="form-control" placeholder="" aria-label="Nome" aria-describedby="basic-addon1">
-            </div>
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="basic-addon1">Email</span>
-                </div>
-                <input type="text" class="form-control" placeholder=@User.Identity.Name aria-label="Email"
-                    aria-describedby="basic-addon1">
-            </div>
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="basic-addon1">Instituto</span>
-                </div>
-                <input type="text" class="form-control" placeholder="" aria-label="Instituto" aria-describedby="basic-addon1">
-            </div>
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="basic-addon1">Categoria</span>
-                </div>
-                <input type="text" class="form-control" placeholder="" aria-label="Categoria" aria-describedby="basic-addon1">
-            </div>
-
-            <br />
-            <h3>Graus</h3>
-            
-            <form id="addGrau">
+        <div class="container" id="containerDadosPessoais">
+            <form class="form-group row" id="editarFicha">
                 <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="basic-addon1">Ano</span>
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Nome</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="" aria-label="Nome" aria-describedby="basic-addon1">
                 </div>
-                <input type="text" class="form-control" placeholder="" aria-label="Ano" aria-describedby="basic-addon1">
-            </div>
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="basic-addon1">Titulo</span>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Email</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder=@User.Identity.Name aria-label="Email"
+                           aria-describedby="basic-addon1">
                 </div>
-                <input type="text" class="form-control" placeholder="" aria-label="Titulo" aria-describedby="basic-addon1">
-            </div>
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="basic-addon1">Area</span>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Instituto</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="" aria-label="Instituto" aria-describedby="basic-addon1">
                 </div>
-                <input type="text" class="form-control" placeholder="" aria-label="Categoria" aria-describedby="basic-addon1">
-            </div>
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="basic-addon1">Instituição</span>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Categoria</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="" aria-label="Categoria" aria-describedby="basic-addon1">
                 </div>
-                <input type="text" class="form-control" placeholder="" aria-label="Instituicao" aria-describedby="basic-addon1">
-            </div>
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="basic-addon1">Classificação</span>
-                </div>
-                <input type="text" class="form-control" placeholder="" aria-label="Classificacao" aria-describedby="basic-addon1">
-            </div>
-            </form>
+        </div>
+        <br />
 
+        <!-- OUTROS GRAUS-->
+        <h3>Graus</h3>
+        <div class="container" id="containerGraus">
+            <form class="form-group" id="addGrau">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Ano</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="" aria-label="Ano" aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Titulo</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="" aria-label="Titulo" aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Area</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="" aria-label="Categoria" aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Instituição</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="" aria-label="Instituicao" aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Classificação</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="" aria-label="Classificacao" aria-describedby="basic-addon1">
+                </div>
+            </form>
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="basic-addon1">Grau</span>
@@ -99,11 +103,14 @@ ViewBag.Title = "FichaDocente";
                 </div>
                 <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
             </div>
+        </div>
 
-            <br />
-            <h3>Disciplinas</h3>
+        <br />
 
-            <form id="addDisciplina">
+        <!-- DISCIPLINAS -->
+        <h3>Disciplinas</h3>
+        <div class="container" id="containerDisciplinas">
+            <form class="form-group" id="addDisciplina">
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="basic-addon1">Ano Letivo</span>
@@ -121,14 +128,14 @@ ViewBag.Title = "FichaDocente";
                         <span class="input-group-text" id="basic-addon1">Unidade Curricular</span>
                     </div>
                     <input type="text" class="form-control" placeholder="" aria-label="Unidade Curricular"
-                        aria-describedby="basic-addon1">
+                           aria-describedby="basic-addon1">
                 </div>
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="basic-addon1">Ciclo de Estudos</span>
                     </div>
                     <input type="text" class="form-control" placeholder="" aria-label="Ciclo de Estudos"
-                        aria-describedby="basic-addon1">
+                           aria-describedby="basic-addon1">
                 </div>
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
@@ -150,73 +157,104 @@ ViewBag.Title = "FichaDocente";
                         <span class="input-group-text" id="basic-addon1">Total de Horas</span>
                     </div>
                     <input type="number" class="form-control" placeholder="" aria-label="Ciclo de Estudos"
-                        aria-describedby="basic-addon1">
+                           aria-describedby="basic-addon1">
                 </div>
             </form>
+        </div>
+        <br />
 
-            <br />
-            <h3>Registos</h3>
-
-            <form id="addRegistos">
+        <!-- REGISTOS -->
+        <h3>Registos</h3>
+        <div class="container" id="containerRegistos">
+            <form class="form-group" id="addRegistos">
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="basic-addon1">Centro de Investigação</span>
                     </div>
                     <input type="text" class="form-control" placeholder="" aria-label="Centro de Investigacao"
-                        aria-describedby="basic-addon1">
+                           aria-describedby="basic-addon1">
                 </div>
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="basic-addon1">Unidade de Investigação</span>
                     </div>
                     <input type="text" class="form-control" placeholder="" aria-label="Unidade de Investigacao"
-                        aria-describedby="basic-addon1">
+                           aria-describedby="basic-addon1">
                 </div>
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="basic-addon1">Classificação</span>
                     </div>
                     <input type="text" class="form-control" placeholder="" aria-label="Classificacao"
-                        aria-describedby="basic-addon1">
+                           aria-describedby="basic-addon1">
                 </div>
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="basic-addon1">Instituição</span>
                     </div>
                     <input type="text" class="form-control" placeholder="" aria-label="Instituicao"
-                        aria-describedby="basic-addon1">
+                           aria-describedby="basic-addon1">
                 </div>
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="basic-addon1">Percentagem de Tempo</span>
                     </div>
                     <input type="text" class="form-control" placeholder="" aria-label="Percentagem de Tempo"
-                        aria-describedby="basic-addon1">
+                           aria-describedby="basic-addon1">
                 </div>
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="basic-addon1">Observações</span>
                     </div>
                     <input type="text" class="form-control" placeholder="" aria-label="Observacoes"
-                        aria-describedby="basic-addon1">
+                           aria-describedby="basic-addon1">
                 </div>
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="basic-addon1">Data de Inicio</span>
                     </div>
                     <input type="text" class="form-control" placeholder="" aria-label="Data de Inicio"
-                        aria-describedby="basic-addon1">
+                           aria-describedby="basic-addon1">
                 </div>
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="basic-addon1">Data de Fim</span>
                     </div>
                     <input type="text" class="form-control" placeholder="" aria-label="Data de Fim"
-                        aria-describedby="basic-addon1">
+                           aria-describedby="basic-addon1">
                 </div>
             </form>
-        </form>
-        <!-- falta atividade -->
+        </div>
+
+        <!-- ATIVIDADE -->
+        <h3>Atividades</h3>
+        <div class="container" id="containerAtividades">
+
+            <form>
+                <div class="form-group">
+                    <label for="tipoAtividade">Tipo de Atividade</label>
+                    <input type="text" class="form-control" id="inputTipoAtividade" placeholder="Descreva a Atividade">
+                </div>
+                <div class="form-group">
+                    <label for="dataAtividade">Data Ocorrência</label>
+                    <input type="date" class="form-control" id="inputDataAtividade" placeholder="Data">
+                </div>
+                <div class="form-group">
+                    <label for="nomeAtividade">Nome da Atividade </label>
+                    <input type="text" class="form-control" id="inputNomeAtividade" placeholder="Nome da Atividade">
+                </div>
+                <div class="form-group">
+                    <label for="institutoAtividade">Instituto onde se realizou a Atividade</label>
+                    <input type="text" class="form-control" id="inputInstitutoAtividade" placeholder="Instituto">
+                </div>
+
+            </form>
+
+        </div>
+        <!-- botao para salvar modificações da pagina e enviar os dados alterados para a base dados-->
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+
     </div>
 </body>
 
