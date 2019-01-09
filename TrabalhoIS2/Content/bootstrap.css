@@ -4211,7 +4211,7 @@ input[type="button"].btn-block {
 }
 
 .navbar-nav .nav-link {
-  padding-right: 2;
+  padding-right: 0;
   padding-left: 0;
 }
 
