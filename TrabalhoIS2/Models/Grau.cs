@@ -7,14 +7,10 @@ namespace TrabalhoIS2.Models
 {
     public class Grau
     {
-
-        protected String Ano { get; set; }
-        protected String Titulo { get; set; }
-        protected String Area { get; set; }
-        protected String Instituicao { get; set; }
-        protected String Classificacao { get; set; }
-
-
-
+        protected string Ano { get; set; }
+        protected string Titulo { get; set; }
+        protected string Area { get; set; }
+        protected string Instituicao { get; set; }
+        protected string Classificacao { get; set; }
     }
 }

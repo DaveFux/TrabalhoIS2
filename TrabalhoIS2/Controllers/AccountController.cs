@@ -57,6 +57,7 @@ namespace TrabalhoIS2.Controllers
         [AllowAnonymous]
         public ActionResult Login(string returnUrl)
         {
+            Console.WriteLine("Get Login");
             ViewBag.ReturnUrl = returnUrl;
             return View();
         }
@@ -68,6 +69,7 @@ namespace TrabalhoIS2.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Login(LoginViewModel model, string returnUrl)
         {
+            Console.WriteLine("Post Login");
             if (!ModelState.IsValid)
             {
                 return View(model);
@@ -96,6 +98,7 @@ namespace TrabalhoIS2.Controllers
         [AllowAnonymous]
         public async Task<ActionResult> VerifyCode(string provider, string returnUrl, bool rememberMe)
         {
+            Console.WriteLine("Get VerifyCode");
             // Require that the user has already logged in via username/password or external login
             if (!await SignInManager.HasBeenVerifiedAsync())
             {
@@ -111,6 +114,7 @@ namespace TrabalhoIS2.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> VerifyCode(VerifyCodeViewModel model)
         {
+            Console.WriteLine("Post VerifyCode");
             if (!ModelState.IsValid)
             {
                 return View(model);

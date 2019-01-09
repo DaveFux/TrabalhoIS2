@@ -1,0 +1,73 @@
+﻿@model TrabalhoIS2.Models.Docente
+
+@{
+    ViewBag.Title = "FichaDocente";
+}
+
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Ficha Docente</title>
+</head>
+
+<body>
+    <div class="body-content">
+        <h2>Ficha do Docente</h2>
+        <br />
+        <h3>Dados pessoais</h3>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Nome</span>
+            </div>
+            <input type="text" class="form-control" placeholder="" aria-label="Nome" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Email</span>
+            </div>
+            <input type="text" class="form-control" placeholder=@User.Identity.Name aria-label="Email" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Instituto</span>
+            </div>
+            <input type="text" class="form-control" placeholder="" aria-label="Instituto" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Categoria</span>
+            </div>
+            <input type="text" class="form-control" placeholder="" aria-label="Categoria" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Grau</span>
+            </div>
+            <select>
+                <option value="Licenciatura">Licenciatura</option>
+                <option value="Mestrado">Mestrado</option>
+                <option value="Doutoramento">Doutoramento</option>
+            </select>
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">ExperienciaProfissional</span>
+            </div>
+            <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+        <!-- falta disciplina, registo, atividade, são todas custom input-groups-->
+    </div>
+</body>
+
+</html>
+
+
+
+
+
+

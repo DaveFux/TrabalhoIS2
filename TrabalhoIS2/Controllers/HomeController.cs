@@ -32,6 +32,10 @@ namespace TrabalhoIS2.Controllers
             return View();
         }
 
+        public ActionResult EditarFicha()
+        {
+            return View();
+        }
 
 
 

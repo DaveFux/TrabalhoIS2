@@ -10,6 +10,7 @@
 
 </head>
 <body>
+    
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-nav bg-light">
             <a class="navbar-brand" href="~/">
@@ -24,14 +25,33 @@
                     <li class="nav-link">@Html.ActionLink("Home", "Index", "Home")</li>
                     <li class="nav-link">@Html.ActionLink("Objetivo", "About", "Home")</li>
                     <li class="nav-link">@Html.ActionLink("Contactos", "Contact", "Home")</li>
-                    <li class="nav-link">@Html.ActionLink("Registar", "Register", "Account")</li>
-                    <li class="nav-link">@Html.ActionLink("Log in", "Login", "Account")</li>
-                </ul>
+                    @if (Request.IsAuthenticated)
+                    {
+                        using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "collapse navbar-collapse" }))
+                        {
+                            
+                            @Html.AntiForgeryToken()
+                            <li>
+                                <!--aqui ele vai criar uma tab na navbar -->
+                                @Html.ActionLink("Hello " + User.Identity.Name + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+                            </li>
+                            <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
 
-            </div>
-        </nav>
+                        };
+                        <li class="nav-link">@Html.ActionLink("Ver Informação", "FichaDocente", "Home")</li>
+                        <li class="nav-link">@Html.ActionLink("Editar Informação", "EditarFicha", "Home")</li>
+                    }
+                    else
+                    {
+                        <li class="nav-link">@Html.ActionLink("Register", "Register", "Account")</li>
+                        <li class="nav-link">@Html.ActionLink("Log in", "Login", "Account")</li>
+                    }
+                </ul>
+        
     </div>
-   
+    </nav>
+    </div>
+
     <div class="container body-content">
         @RenderBody()
         <hr />

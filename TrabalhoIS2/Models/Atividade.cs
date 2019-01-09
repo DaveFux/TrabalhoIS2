@@ -7,11 +7,9 @@ namespace TrabalhoIS2.Models
 {
     public class Atividade
     {
-
-        protected String Tipo { get; set; }
-        protected String Data { get; set; }
-        protected String Nome { get; set; }
-        protected String Instituto { get; set; }
-
+        protected string Tipo { get; set; }
+        protected string Data { get; set; }
+        protected string Nome { get; set; }
+        protected string Instituto { get; set; }
     }
 }
