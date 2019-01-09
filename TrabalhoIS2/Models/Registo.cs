@@ -10,8 +10,8 @@ namespace TrabalhoIS2.Models
         protected string CentroInvestigacao { get; set; }
         protected string UnidadeInvestigacao { get; set; }
         protected string Classificacao { get; set; }
-        protected string Instituico { get; set; }
-        protected double PercTempo { get; set; }
+        protected string Instituicao { get; set; }
+        protected int PercTempo { get; set; }
         protected string Observacoes { get; set; }
         protected string DataInicio { get; set; }
         protected string DataFim { get; set; }
