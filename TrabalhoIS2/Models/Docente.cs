@@ -17,5 +17,8 @@ namespace TrabalhoIS2.Models
         protected List<Registo> Registos { get; set; }
         protected List<Atividade> Atividades { get; set; }
         protected List<Disciplina> Disciplinas { get; set; }
+        void getByEmail() {
+
+        }
     }
 }
