@@ -36,31 +36,38 @@ namespace TrabalhoIS2.Controllers
             return View();
         }
 
-        /*public ActionResult ManageAccount()
-        {
-            String connectionString = "<THE CONNECTION STRING HERE>";
-            String sql = "SELECT * FROM docentes";
-            SqlCommand cmd = new SqlCommand(sql, conn);
+        //public ActionResult ManageAccount()
+        //{
+        //    String connectionString = "Data Source=(LocalDb)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\aspnet-TrabalhoIS2-20181220085839.mdf;Initial Catalog=aspnet-TrabalhoIS2-20181220085839;Integrated Security=True";
+        //    String sql = "SELECT * FROM AspNetUsers";
+        //    SqlCommand cmd = new SqlCommand(sql, conn);
 
-            var model = new List<Docente>();
-            using (SqlConnection conn = new SqlConnection(connectionString))
-            {
-                conn.Open();
-                SqlDataReader rdr = cmd.ExecuteReader();
-                while (rdr.Read())
-                {
-                    var docente = new Docente();
-                    docente.Nome=(String)rdr["FirstName"];
-                    docente.Instituto = rdr["LastName"];
-                    docente.Categoria = rdr["Class"];
-                    model.Add(docente);
-                }
+        //    var model = new List<AspNetUsers>();
+        //    using (SqlConnection conn = new SqlConnection(connectionString))
+        //    {
+        //        conn.Open();
+        //        SqlDataReader rdr = cmd.ExecuteReader();
+        //        while (rdr.Read())
+        //        {
+        //            var aspNetUsers = new AspNetUsers();
+        //            aspNetUsers.email=(String)rdr["Email"];
+        //            /* docente.Instituto = (String)rdr["Instituto"];
+        //             docente.Categoria = (String)rdr["Categoria"];
+        //             docente.Grau = (Grau)rdr["Grau"];
+        //             //docente.UnidadeOrganica = (String)rdr["Class"];
+        //             docente.ExperienciaProfissionl = (String)rdr["ExperienciaProfissional"];
+        //             //docente.Registos = (String)rdr["Class"];
+        //             //docente.Atividades = (String)rdr["Class"];
+        //             //docente.Disciplinas = (String)rdr["Class"];
 
-            }
-
-            return View(model);
-        }
-        */
+        //             model.Add(docente);*/
+        //            model.Add(aspNetUsers); 
+        //        }
+        //        //Vou testar agora okapa
+        //    }
+        //    //ViewBag.users = model;
+        //    return View(model);
+        //}
         public ApplicationSignInManager SignInManager
         {
             get

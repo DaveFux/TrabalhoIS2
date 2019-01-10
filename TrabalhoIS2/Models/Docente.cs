@@ -7,18 +7,16 @@ namespace TrabalhoIS2.Models
 {
     public class Docente
     {
-        protected int IdDocente { get; set; }
-        protected string Nome { get; set; }
-        protected string Instituto { get; set; }
-        protected string Categoria { get; set; }
-        protected Grau Grau { get; set; }
-        protected string UnidadeOrganica { get; set; } //verificar 
-        protected string ExperienciaProfissionl { get; set; }
-        protected List<Registo> Registos { get; set; }
-        protected List<Atividade> Atividades { get; set; }
-        protected List<Disciplina> Disciplinas { get; set; }
-        void getByEmail() {
-
-        }
+        public int IdDocente { get; set; }
+        public string Nome { get; set; }
+        public string Instituto { get; set; }
+        public string Categoria { get; set; }
+        public Grau Grau { get; set; }
+        public string UnidadeOrganica { get; set; } //verificar 
+        public string ExperienciaProfissionl { get; set; }
+        public List<Registo> Registos { get; set; }
+        public List<Atividade> Atividades { get; set; }
+        public List<Disciplina> Disciplinas { get; set; }
+        
     }
 }
